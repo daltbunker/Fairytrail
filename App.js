@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import Header from './components/Header';
 import ProfilePicture from './components/ProfilePicture';
+import AboutHeading from './components/AboutHeading';
 
 class App extends Component {
   constructor() {
@@ -27,6 +28,7 @@ class App extends Component {
         <ScrollView style={styles.scrollView}>
           <Header saveState={this.state.datingStatusChanged} />
           <ProfilePicture />
+          <AboutHeading />
           <Text style={styles.text}>About</Text>
         </ScrollView>
       </SafeAreaView>

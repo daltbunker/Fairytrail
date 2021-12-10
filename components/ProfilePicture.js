@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, ImageBackground, StatusBar} from 'react-native';
+import {View, Text, StyleSheet, ImageBackground} from 'react-native';
 import profile_1 from '../assets/images/profile-1.jpg';
 
 const ProfilePicture = () => {
@@ -10,7 +10,7 @@ const ProfilePicture = () => {
         resizeMode="cover"
         style={styles.backgroundContainer}>
         <View style={styles.paidTag}>
-          <Text style={{color: 'white'}}>Paid</Text>
+          <Text style={styles.paidText}>Paid</Text>
         </View>
       </ImageBackground>
     </View>
@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
     height: 400,
     overflow: 'hidden',
     borderRadius: 4,
+    marginBottom: 30,
   },
   backgroundContainer: {
     flex: 1,
@@ -36,6 +37,11 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     // borderTopLeftRadius: 4,
     borderBottomRightRadius: 20,
+  },
+  paidText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });
 
