@@ -20,7 +20,7 @@ const ProfilePicture = () => {
 const styles = StyleSheet.create({
   profileContainer: {
     flex: 1,
-    height: 400,
+    height: 450,
     overflow: 'hidden',
     borderRadius: 4,
     marginBottom: 30,
@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     height: 40,
     width: 100,
     overflow: 'hidden',
-    // borderTopLeftRadius: 4,
     borderBottomRightRadius: 20,
   },
   paidText: {

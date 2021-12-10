@@ -1,10 +1,9 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import users from '../data/users';
 import AboutSubheading from './AboutSubheading';
 
-const AboutHeading = () => {
-  const {heading, character, datingStatus} = users.user1;
+const AboutHeading = ({user}) => {
+  const {heading, character, datingStatus} = user;
 
   return (
     <View style={styles.aboutHeadingContainer}>
@@ -22,6 +21,7 @@ const AboutHeading = () => {
 const styles = StyleSheet.create({
   aboutHeadingContainer: {
     flex: 1,
+    marginBottom: 30,
   },
   aboutTitle: {
     fontSize: 25,
