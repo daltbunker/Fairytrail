@@ -1,24 +1,50 @@
-import React from 'react';
-import {View, Text, StyleSheet, SafeAreaView} from 'react-native';
+import React, {Component} from 'react';
+import {
+  StyleSheet,
+  Text,
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+} from 'react-native';
+import Header from './components/Header';
+import ProfilePicture from './components/ProfilePicture';
 
-const App = () => {
-  return (
-    // <SafeAreaView>
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello World</Text>
-    </View>
-    // </SafeAreaView>
-  );
-};
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      datingStatusChanged: false,
+    };
+  }
+
+  changeDatingStatus = () => {
+    this.setState({datingStatusChanged: !this.state.datingStatusChanged});
+  };
+
+  render() {
+    return (
+      <SafeAreaView style={styles.container}>
+        <ScrollView style={styles.scrollView}>
+          <Header saveState={this.state.datingStatusChanged} />
+          <ProfilePicture />
+          <Text style={styles.text}>About</Text>
+        </ScrollView>
+      </SafeAreaView>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    paddingTop: StatusBar.currentHeight,
+  },
+  scrollView: {
+    marginHorizontal: 20,
   },
   text: {
-    color: 'blue',
+    fontSize: 42,
+    // fontFamily: 'Nunito-Bold',
   },
 });
 
