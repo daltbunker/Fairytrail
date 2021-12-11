@@ -54,7 +54,7 @@ class App extends Component {
           saveDisplay={this.state.datingStatusChanged}
           saveHandler={this.onDatingStatusChange}
         />
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <ProfilePicture />
           <AboutHeading
             user={users.user1}
