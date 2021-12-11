@@ -5,10 +5,14 @@ const AboutCard = ({card, height, paddingBottom}) => {
   return (
     <View style={{...styles.container, height: height}}>
       <Text
-        style={{...styles.text, color: card[3], paddingBottom: paddingBottom}}>
-        {card[1]}
+        style={{
+          ...styles.text,
+          color: card.textColor,
+          paddingBottom: paddingBottom,
+        }}>
+        {card.heading}
       </Text>
-      <Text style={styles.text}>{card[2]}</Text>
+      <Text style={styles.text}>{card.content}</Text>
     </View>
   );
 };
