@@ -1,21 +1,20 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Text} from 'react-native';
 import AboutCard from './AboutCard';
 
 const AboutCardList = ({cards}) => {
+  const AboutCards = cards.map(card => {
+    return <AboutCard card={card} key={card[0]} />;
+  });
   return (
-    <View style={styles.listContainer}>
-      <AboutCard card={cards[0]} />
-      <AboutCard card={cards[1]} />
-      <AboutCard card={cards[2]} />
-      <AboutCard card={cards[3]} />
-      <AboutCard card={cards[4]} />
+    <View style={styles.container}>
+      <Text>{AboutCards}</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  listContainer: {
+  container: {
     marginBottom: 10,
   },
 });

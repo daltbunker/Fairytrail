@@ -1,17 +1,17 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-const AboutCard = ({card, cardHeight}) => {
+const AboutCard = ({card}) => {
   return (
-    <View style={styles.aboutCardContainer}>
-      <Text style={{...styles.text, color: card[2]}}>{card[0]}</Text>
-      <Text style={styles.text}>{card[1]}</Text>
+    <View style={styles.container}>
+      <Text style={{...styles.text, color: card[3]}}>{card[1]}</Text>
+      <Text style={styles.text}>{card[2]}</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  aboutCardContainer: {
+  container: {
     flexDirection: 'column',
     marginBottom: 30,
   },
