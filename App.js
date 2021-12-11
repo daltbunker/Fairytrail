@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import {StyleSheet, SafeAreaView, StatusBar, ScrollView} from 'react-native';
 import Header from './components/Header';
 import ProfilePicture from './components/ProfilePicture';
-import AboutHeading from './components/AboutHeading';
-import AboutCardList from './components/AboutCardList';
+import AboutHeading from './components/About/AboutHeading';
+import AboutCardList from './components/About/AboutCardList';
 import DatingSelector from './components/DatingSelector';
-import ModalMain from './components/ModalMain';
+import ModalMain from './components/Modal/ModalMain';
 import users from './data/users';
 
 class App extends Component {
