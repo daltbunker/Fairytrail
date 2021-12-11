@@ -6,7 +6,6 @@ const users = {
       age: 34,
     },
     character: 'Aladdin',
-    datingStatus: 'Only Friends',
     aboutCards: [
       [
         'Most adventurous experience:',

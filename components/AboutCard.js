@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-const AboutCard = ({card}) => {
+const AboutCard = ({card, cardHeight}) => {
   return (
     <View style={styles.aboutCardContainer}>
       <Text style={{...styles.text, color: card[2]}}>{card[0]}</Text>

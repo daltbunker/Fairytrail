@@ -16,8 +16,7 @@ const AboutCardList = ({cards}) => {
 
 const styles = StyleSheet.create({
   listContainer: {
-    // flex: 1,
-    marginBottom: 30,
+    marginBottom: 10,
   },
 });
 
