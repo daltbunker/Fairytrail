@@ -1,7 +1,8 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
-import defaultStyles from '../assets/styles';
+
+const headingStyles = {fontSize: 24, fontWeight: 'bold'};
 
 const Header = ({title, saveHandler, saveDisplay}) => {
   return (
@@ -16,7 +17,7 @@ const Header = ({title, saveHandler, saveDisplay}) => {
         disabled={saveDisplay ? false : true}>
         <Text
           style={{
-            ...defaultStyles.heading,
+            ...headingStyles,
             paddingLeft: 4,
             color: saveDisplay ? '#9979EC' : 'white',
           }}>
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   title: {
-    ...defaultStyles.heading,
+    ...headingStyles,
     color: 'black',
     textAlign: 'center',
   },
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    ...defaultStyles.heading,
+    ...headingStyles,
     color: '#9979EC',
     paddingLeft: 4,
   },
