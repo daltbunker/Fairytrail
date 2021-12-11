@@ -52,7 +52,7 @@ class App extends Component {
       <SafeAreaView style={styles.appContainer}>
         <Header
           saveState={this.state.datingStatusChanged}
-          saveEvent={this.onDatingStatusChange}
+          saveHandler={this.onDatingStatusChange}
         />
         <ScrollView>
           <ProfilePicture />

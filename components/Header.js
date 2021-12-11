@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import defaultStyles from '../assets/styles';
 
-const Header = ({title, saveEvent, saveState}) => {
+const Header = ({title, saveHandler, saveState}) => {
   return (
     <View style={styles.headerContainer}>
       <TouchableOpacity style={styles.backButtonContainer}>
@@ -11,7 +11,9 @@ const Header = ({title, saveEvent, saveState}) => {
         <Text style={styles.backButton}>Back</Text>
       </TouchableOpacity>
       <Text style={styles.text}>{title}</Text>
-      <TouchableOpacity onPress={saveEvent} disabled={saveState ? false : true}>
+      <TouchableOpacity
+        onPress={saveHandler}
+        disabled={saveState ? false : true}>
         <Text
           style={{
             ...defaultStyles.heading,
