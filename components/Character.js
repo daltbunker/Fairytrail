@@ -1,24 +1,24 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-const Character = ({text}) => {
+const Character = ({name}) => {
   return (
-    <View style={styles.characterContainer}>
-      <Text style={styles.characterLabel}>Character:</Text>
-      <Text style={styles.characterName}>{text}</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Character:</Text>
+      <Text style={styles.text}>{name}</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  characterContainer: {
+  container: {
     flexDirection: 'column',
   },
-  characterLabel: {
+  title: {
     fontSize: 18,
     fontWeight: 'bold',
   },
-  characterName: {
+  text: {
     fontSize: 21,
     fontWeight: 'bold',
     color: '#9979EC',

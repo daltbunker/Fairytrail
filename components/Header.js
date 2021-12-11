@@ -3,22 +3,22 @@ import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import defaultStyles from '../assets/styles';
 
-const Header = ({title, saveHandler, saveState}) => {
+const Header = ({title, saveHandler, saveDisplay}) => {
   return (
-    <View style={styles.headerContainer}>
-      <TouchableOpacity style={styles.backButtonContainer}>
+    <View style={styles.container}>
+      <TouchableOpacity style={styles.backButton}>
         <Icon name="left" size={24} color="#9979EC" />
-        <Text style={styles.backButton}>Back</Text>
+        <Text style={styles.buttonText}>Back</Text>
       </TouchableOpacity>
-      <Text style={styles.text}>{title}</Text>
+      <Text style={styles.title}>{title}</Text>
       <TouchableOpacity
         onPress={saveHandler}
-        disabled={saveState ? false : true}>
+        disabled={saveDisplay ? false : true}>
         <Text
           style={{
             ...defaultStyles.heading,
             paddingLeft: 4,
-            color: saveState ? '#9979EC' : 'white',
+            color: saveDisplay ? '#9979EC' : 'white',
           }}>
           Save
         </Text>
@@ -32,7 +32,7 @@ Header.defaultProps = {
 };
 
 const styles = StyleSheet.create({
-  headerContainer: {
+  container: {
     paddingHorizontal: 0,
     flexDirection: 'row',
     alignItems: 'center',
@@ -41,16 +41,16 @@ const styles = StyleSheet.create({
     padding: 15,
     backgroundColor: 'white',
   },
-  text: {
+  title: {
     ...defaultStyles.heading,
     color: 'black',
     textAlign: 'center',
   },
-  backButtonContainer: {
+  backButton: {
     flexDirection: 'row',
     alignItems: 'center',
   },
-  backButton: {
+  buttonText: {
     ...defaultStyles.heading,
     color: '#9979EC',
     paddingLeft: 4,

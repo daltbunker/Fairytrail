@@ -49,9 +49,9 @@ class App extends Component {
 
   render() {
     return (
-      <SafeAreaView style={styles.appContainer}>
+      <SafeAreaView style={styles.container}>
         <Header
-          saveState={this.state.datingStatusChanged}
+          saveDisplay={this.state.datingStatusChanged}
           saveHandler={this.onDatingStatusChange}
         />
         <ScrollView>
@@ -63,7 +63,7 @@ class App extends Component {
           <AboutCardList cards={users.user1.aboutCards} />
           <DatingSelector
             modalDisplay={this.state.modalDisplay}
-            clickEvent={this.onSelectorClicked}
+            selectorHandler={this.onSelectorClicked}
             selectorText={this.state.datingStatus}
           />
           <ModalMain
@@ -78,13 +78,10 @@ class App extends Component {
 }
 
 const styles = StyleSheet.create({
-  appContainer: {
+  container: {
     flex: 1,
     paddingTop: StatusBar.currentHeight,
     marginHorizontal: 20,
-  },
-  text: {
-    fontSize: 42,
   },
 });
 

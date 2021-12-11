@@ -2,13 +2,13 @@ import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-const DatingSelector = ({clickEvent, selectorText}) => {
+const DatingSelector = ({selectorHandler, selectorText}) => {
   return (
-    <View style={styles.datingSelectorContainer}>
+    <View style={styles.container}>
       <Text style={styles.heading}>
         Fairytrail Mode (tell others now you’re not open to dating)
       </Text>
-      <TouchableOpacity style={styles.selector} onPress={clickEvent}>
+      <TouchableOpacity style={styles.selector} onPress={selectorHandler}>
         <Text style={styles.text}>{selectorText}</Text>
         <Icon name="caretdown" size={24} color="#555555" />
       </TouchableOpacity>
@@ -18,7 +18,7 @@ const DatingSelector = ({clickEvent, selectorText}) => {
 };
 
 const styles = StyleSheet.create({
-  datingSelectorContainer: {
+  container: {
     flexDirection: 'column',
     marginTop: 0,
     marginBottom: 40,
@@ -34,7 +34,6 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   selector: {
-    // borderBottomWidth: 3,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },

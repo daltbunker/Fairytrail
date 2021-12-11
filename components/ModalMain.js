@@ -4,8 +4,8 @@ import ModalButtons from './ModalButtons';
 import ModalOptions from './ModalOptions';
 
 class ModalMain extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       datingSelected: true,
       friendsSelected: false,

@@ -2,23 +2,23 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import Character from './Character';
 
-const AboutSubheading = ({characterText, datingStatus}) => {
+const AboutSubheading = ({characterName, datingStatus}) => {
   return (
-    <View style={styles.subheadingContainer}>
-      <Character text={characterText} />
-      <View style={styles.datingStatusDisplay}>
-        <Text style={styles.datingStatusText}>{datingStatus}</Text>
+    <View style={styles.container}>
+      <Character name={characterName} />
+      <View style={styles.textContainer}>
+        <Text style={styles.text}>{datingStatus}</Text>
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  subheadingContainer: {
+  container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  datingStatusDisplay: {
+  textContainer: {
     backgroundColor: '#E53B90',
     alignItems: 'center',
     justifyContent: 'center',
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     borderRadius: 10,
   },
-  datingStatusText: {
+  text: {
     color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
