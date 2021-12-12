@@ -18,8 +18,8 @@ class App extends Component {
     };
   }
 
-  toggleDatingStatusChanged = () => {
-    this.setState({datingStatusChanged: !this.state.datingStatusChanged});
+  onSaveClicked = () => {
+    this.setState({datingStatusChanged: false});
   };
 
   // Event on DatingSelector clicked in main app view
@@ -53,7 +53,7 @@ class App extends Component {
       <SafeAreaView style={styles.container}>
         <Header
           saveDisplay={this.state.datingStatusChanged}
-          saveHandler={this.toggleDatingStatusChanged}
+          saveHandler={this.onSaveClicked}
         />
         <ScrollView showsVerticalScrollIndicator={false}>
           <ProfilePicture />
