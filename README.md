@@ -6,9 +6,9 @@ To preview this app locally on a simulator, clone this repository and follow the
 
 ``` bash
 # Install dependencies
-npm install | yarn install
+npm install
 cd ios && pod install && cd ..
 
 # Run on iOS
-react-native run-ios
+npx react-native run-ios
 ```
