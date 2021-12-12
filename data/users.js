@@ -11,32 +11,32 @@ const users = {
         id: '1',
         heading: 'Most adventurous experience:',
         content:
-          'My friend and i got stranded in a blizzard when our SUV froze in Iceland!',
+          'My friend and I got stranded in a blizzard when our SUV froze in Iceland!',
         textColor: 'black',
       },
       {
         id: '2',
-        heading: 'Top Wishes:',
+        heading: 'Top wishes:',
         content:
           'Take a year off to explore the world. Have a family. Create a better life for people around me.',
         textColor: 'black',
       },
       {
         id: '3',
-        heading: 'My Values ...',
+        heading: 'My values ...',
         content: 'Kindness, family, healthy living, and education.',
         textColor: '#7EBB89',
       },
       {
         id: '4',
-        heading: 'My Hobbies ...',
+        heading: 'My hobbies ...',
         content: 'Scuba diving and international cuisine',
         textColor: '#7EBB89',
       },
       {
         id: '5',
         heading: 'Instagram (only shown to your adventure matches)',
-        content: '@taigaeir',
+        content: '@taigeair',
         textColor: '#7EBB89',
       },
     ],
