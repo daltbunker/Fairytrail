@@ -11,9 +11,8 @@ class ModalMain extends Component {
     };
   }
 
-  // eslint-disable-next-line prettier/prettier
-  setSelection = (value) => {
-    if (value === 'dating') {
+  setSelection = isDating => {
+    if (isDating) {
       this.setState({
         datingSelected: true,
       });

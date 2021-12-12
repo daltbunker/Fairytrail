@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, SafeAreaView, StatusBar, ScrollView} from 'react-native';
+import {StyleSheet, SafeAreaView, ScrollView} from 'react-native';
 import Header from './components/Header';
 import ProfilePicture from './components/ProfilePicture';
 import AboutHeading from './components/About/AboutHeading';
@@ -22,12 +22,14 @@ class App extends Component {
     this.setState({datingStatusChanged: !this.state.datingStatusChanged});
   };
 
+  // Event on DatingSelector clicked in main app view
   onSelectorClicked = () => {
     this.setState({modalDisplay: true});
   };
 
-  onSelectClicked = (value) => {
-    if (value) {
+  // Event on select button clicked in modal
+  onSelectClicked = isDating => {
+    if (isDating) {
       this.setState({
         datingStatusChanged: true,
         datingStatus: 'Dating & Friends',
@@ -79,7 +81,6 @@ class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: StatusBar.currentHeight,
     marginHorizontal: 20,
   },
 });

@@ -22,6 +22,7 @@ class PictureList extends Component {
     };
   }
 
+  // updates highlighted circle in circleArray
   onImageSwiped = ({nativeEvent}) => {
     // calculates current index of images array
     const newCurrent = Math.ceil(
@@ -39,7 +40,7 @@ class PictureList extends Component {
       return <Image key={i} source={image} style={styles.image} />;
     });
 
-    const indicatorArray = images.map((image, i) => (
+    const circleArray = images.map((image, i) => (
       <Text
         key={i}
         style={{
@@ -61,7 +62,7 @@ class PictureList extends Component {
         <View style={styles.tag}>
           <Text style={styles.tagText}>Paid</Text>
         </View>
-        <View style={styles.scrollIndicator}>{indicatorArray}</View>
+        <View style={styles.circles}>{circleArray}</View>
       </View>
     );
   }
@@ -69,7 +70,7 @@ class PictureList extends Component {
 
 const {width, height} = Dimensions.get('window');
 const imgWidth = width - 40; // 40 repesents padding on screen view
-const imgHeight = height * 0.4;
+const imgHeight = height * 0.4; // 40 percent of screen height
 
 const styles = StyleSheet.create({
   container: {
@@ -96,7 +97,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
-  scrollIndicator: {
+  circles: {
     flexDirection: 'row',
     position: 'absolute',
     bottom: 10,

@@ -5,13 +5,13 @@ const ModalButtons = ({selected, selectEvent}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Choose Mode</Text>
-      <TouchableOpacity onPress={() => selectEvent('dating')}>
+      <TouchableOpacity onPress={() => selectEvent(true)}>
         <Text
           style={selected.datingSelected ? styles.selectedText : styles.text}>
           Dating {'&'} Friends
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => selectEvent('friends')}>
+      <TouchableOpacity onPress={() => selectEvent(false)}>
         <Text
           style={!selected.datingSelected ? styles.selectedText : styles.text}>
           Only Friends
