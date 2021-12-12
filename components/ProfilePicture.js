@@ -25,7 +25,7 @@ class PictureList extends Component {
   // updates highlighted circle in circleArray
   onImageSwiped = ({nativeEvent}) => {
     // calculates current index of images array
-    const newCurrent = Math.ceil(
+    const newCurrent = Math.round(
       nativeEvent.contentOffset.x / nativeEvent.layoutMeasurement.width,
     );
     this.setState(prevState => {
