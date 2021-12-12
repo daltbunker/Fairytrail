@@ -8,7 +8,6 @@ class ModalMain extends Component {
     super(props);
     this.state = {
       datingSelected: true,
-      friendsSelected: false,
     };
   }
 
@@ -17,12 +16,10 @@ class ModalMain extends Component {
     if (value === 'dating') {
       this.setState({
         datingSelected: true,
-        friendsSelected: false,
       });
     } else {
       this.setState({
         datingSelected: false,
-        friendsSelected: true,
       });
     }
   };
@@ -44,7 +41,7 @@ class ModalMain extends Component {
                 selectHandler={() =>
                   this.props.selectHandler(this.state.datingSelected)
                 }
-                cancelHandler={this.props.cancelHandler}
+                cancelHandler={() => this.props.cancelHandler()}
               />
             </View>
           </View>

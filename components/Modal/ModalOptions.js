@@ -5,20 +5,17 @@ const ModalButtons = ({selected, selectEvent}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Choose Mode</Text>
-      <TouchableOpacity
-        style={{
-          backgroundColor: selected.datingSelected ? '#CCCCCC' : 'white',
-          marginBottom: 5,
-        }}
-        onPress={() => selectEvent('dating')}>
-        <Text style={styles.text}>Dating {'&'} Friends</Text>
+      <TouchableOpacity onPress={() => selectEvent('dating')}>
+        <Text
+          style={selected.datingSelected ? styles.selectedText : styles.text}>
+          Dating {'&'} Friends
+        </Text>
       </TouchableOpacity>
-      <TouchableOpacity
-        style={{
-          backgroundColor: selected.friendsSelected ? '#CCCCCC' : 'white',
-        }}
-        onPress={() => selectEvent('friends')}>
-        <Text style={styles.text}>Only Friends</Text>
+      <TouchableOpacity onPress={() => selectEvent('friends')}>
+        <Text
+          style={!selected.datingSelected ? styles.selectedText : styles.text}>
+          Only Friends
+        </Text>
       </TouchableOpacity>
     </View>
   );
@@ -35,9 +32,20 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   text: {
+    textAlign: 'center',
+    width: 200,
     fontSize: 21,
     fontWeight: 'bold',
     padding: 3,
+    backgroundColor: 'white',
+  },
+  selectedText: {
+    textAlign: 'center',
+    width: 200,
+    fontSize: 21,
+    fontWeight: 'bold',
+    padding: 3,
+    backgroundColor: '#CCCCCC',
   },
 });
 

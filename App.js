@@ -18,7 +18,7 @@ class App extends Component {
     };
   }
 
-  onDatingStatusChange = () => {
+  toggleDatingStatusChanged = () => {
     this.setState({datingStatusChanged: !this.state.datingStatusChanged});
   };
 
@@ -26,7 +26,6 @@ class App extends Component {
     this.setState({modalDisplay: true});
   };
 
-  // eslint-disable-next-line prettier/prettier
   onSelectClicked = (value) => {
     if (value) {
       this.setState({
@@ -52,7 +51,7 @@ class App extends Component {
       <SafeAreaView style={styles.container}>
         <Header
           saveDisplay={this.state.datingStatusChanged}
-          saveHandler={this.onDatingStatusChange}
+          saveHandler={this.toggleDatingStatusChanged}
         />
         <ScrollView showsVerticalScrollIndicator={false}>
           <ProfilePicture />

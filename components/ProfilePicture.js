@@ -22,7 +22,8 @@ class PictureList extends Component {
     };
   }
 
-  onSlideSwiped = ({nativeEvent}) => {
+  onImageSwiped = ({nativeEvent}) => {
+    // calculates current index of images array
     const newCurrent = Math.ceil(
       nativeEvent.contentOffset.x / nativeEvent.layoutMeasurement.width,
     );
@@ -53,7 +54,7 @@ class PictureList extends Component {
         <ScrollView
           horizontal
           pagingEnabled
-          onScroll={this.onSlideSwiped}
+          onScroll={this.onImageSwiped}
           showsHorizontalScrollIndicator={false}>
           {imgArray}
         </ScrollView>
@@ -100,11 +101,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 10,
     alignSelf: 'center',
-  },
-  circle: {
-    borderRadius: 60 / 2,
-    borderColor: 'white',
-    borderWidth: 3,
   },
 });
 
