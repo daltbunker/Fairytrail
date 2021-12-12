@@ -9,9 +9,9 @@ import {
 } from 'react-native';
 
 const images = [
-  require('../assets/images/profile-1.jpg'),
-  require('../assets/images/profile-2.jpg'),
-  require('../assets/images/profile-3.jpg'),
+  require('../assets/profile-1.jpg'),
+  require('../assets/profile-2.jpg'),
+  require('../assets/profile-3.jpg'),
 ];
 
 class PictureList extends Component {
